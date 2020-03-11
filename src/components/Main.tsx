@@ -41,27 +41,12 @@ const Main = observer(() => {
     return (
         <View style={styles.wrapper}>
             <View style={{ flexDirection: 'row' }}>
-                <View
-                    style={[
-                        styles.currencyTopSideBG,
-                        {
-                            left: 130,
-                        },
-                    ]}
-                />
+                <View style={[styles.currencyTopSideBG]} />
                 <View style={[styles.currencyTopSide, { borderBottomRightRadius: 20 }]} />
                 <View style={styles.currencyTop}>
                     <Delete />
                 </View>
                 <View style={[styles.currencyTopSide, { borderBottomLeftRadius: 20 }]} />
-                <View
-                    style={[
-                        styles.currencyTopSideBG,
-                        {
-                            right: 130,
-                        },
-                    ]}
-                />
             </View>
             <View style={styles.currency}>
                 <MyPicker
@@ -131,7 +116,15 @@ const styles = StyleSheet.create({
         marginHorizontal: 8,
     },
     currencyTopSide: { backgroundColor: '#F6F7F8', flex: 1 },
-    currencyTopSideBG: { width: 50, height: 30, position: 'absolute', backgroundColor: 'white', bottom: 0, zIndex: -1 },
+    currencyTopSideBG: {
+        width: 100,
+        height: 30,
+        position: 'absolute',
+        backgroundColor: 'white',
+        bottom: 0,
+        zIndex: -1,
+        left: 140,
+    },
 });
 
 export default Main;
